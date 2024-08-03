@@ -1,0 +1,31 @@
+#This file gives a detailed documentation/explanation of the code
+
+We import random to generate random numbers
+We import time to create a sleep time between steps
+
+1) Main
+- Set playagain to "yes" by default 
+- we create a while loop which starts the game only if "playagain" 
+variable is set to "yes" or "y"
+- We assign a random number between 1 and 200 using random.randint
+- We get the name of user from "intro" function
+- we assign the number and name as input variables to "pick" function
+- once the player has played, we ask if the player wants to play again
+- the answer is stored in playagain variable
+
+2) Intro:
+- We ask the user its name and store it in "name"
+- We print the gist of game and return the name to main function.
+
+3) Pick:
+- Assign the guesses_taken = 0
+- Only 6 tries are given to user, hence set the while loop for 6 loops
+- In a try section, once the user enters the guess, the "guesses_taken" is increased by 1
+- then we check if the guess entered is equal to, < or > the actual number
+- if the guesses_taken is < 6, we ask them again.
+- if the guess is correct or the guesses_taken >6, the loop breaks
+- However if a number guessed is more than 200 or less than 1, we ask the
+user to enter the number again.
+- in except section, put a valueError to make sure the input is a number
+- Lastly if the number is guessed right or wrong, print the output according to it
+using if else statement
